@@ -8,13 +8,14 @@ public class Main {
         darb2.setPareigos("buhalteris");
         darb2.setDarboPatirtis(1);
         System.out.println(darb1);
+        System.out.println(darb2);
         System.out.println();
 
         Imone company = new Imone("JSC First", 1990);
         company.addEmployee("Name1 Surname1", "manager", 5);
         company.addEmployee("Name2 Surname2", "mechanic", 2);
         company.addEmployee("Name3 Surname3", "security", 4);
-        company.workExperienceGreaterThan(3);
+        company.workExperienceGreaterThan(3); //Print employees with work experience greater than 3 year
 
     }
 }

@@ -8,7 +8,7 @@ public class Darbuotojas {
         this.vardas = vardas;
         this.pavarde = pavarde;
         this.asmensKodas = asmensKodas;
-        //this.amzius = suraskAmzius(Darbuotojas drb);
+        this.amzius = suraskAmziu();
     }
 
     public String getVardas() {
@@ -24,15 +24,17 @@ public class Darbuotojas {
         this.darboPatirtis = darboPatirtis;
     }
 
-    public static int suraskAmzius(Darbuotojas drb) {
+    private int suraskAmziu(){
         int amzius;
-        if(drb.getAsmensKodas().charAt(0) == 3 && drb.getAsmensKodas().charAt(0) == 4){
-            amzius = 2024 - 1900 + Integer.parseInt(drb.getAsmensKodas().substring(1, 3));
-        } else amzius = 2024 - 2000 + Integer.parseInt(drb.getAsmensKodas().substring(1, 3));
+        System.out.println(Integer.parseInt(getAsmensKodas().substring(1, 3)));
+        if(getAsmensKodas().charAt(0) == '3' || getAsmensKodas().charAt(0) == '4'){
+            amzius = 2024 - 1900 - Integer.parseInt(getAsmensKodas().substring(1, 3));
+        } else amzius = 2024 - 2000 - Integer.parseInt(getAsmensKodas().substring(1, 3));
         return amzius;
     }
+
     public String toString(){
-        return vardas + " " + pavarde + " " + pareigos + " " + darboPatirtis;
+        return vardas + " " + pavarde + " " + pareigos + " " + amzius + " " + darboPatirtis;
     }
 }
 
